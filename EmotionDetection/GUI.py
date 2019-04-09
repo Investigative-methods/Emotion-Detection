@@ -1,4 +1,4 @@
-# this is final gui window developed by suresh
+# this is final gui window developed by suresh katamsetty
 try:
     import Tkinter as tk
 except ImportError:
