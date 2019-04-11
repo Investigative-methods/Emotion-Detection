@@ -7,7 +7,10 @@ from EmotionDetection import WordMap
 from EmotionDetection import EvaluateText
 from EmotionDetection import GUI
 import pdb
+<<<<<<< HEAD
 import codecs
+=======
+>>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
 
 #from Tkinter import messagebox
 answer = ' '
@@ -77,7 +80,11 @@ class Training():
             if answer=='yes' and text != ' ':
                 window.destroy()
                 try:
+<<<<<<< HEAD
                     with codecs.open(text, 'r', encoding='utf-8', errors='ignore') as textFile:
+=======
+                    with open(text, 'r') as textFile:
+>>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
                         with open(values, 'r') as valueFile:               
                             WordMap.buildWordMap('y', textFile, valueFile)
                            

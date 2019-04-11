@@ -79,6 +79,7 @@ def evaluate(textFile, valueFile=None):
 	
     if valueFile:
         cm = ConfusionMatrix(totalReal, totalPred)
+<<<<<<< HEAD
         #viewPlot = raw_input("\nView confusion matrix plot? [y/n]:").lower() in ['yes', 'y']
         MsgBox = tkMessageBox.askquestion ('Confusion Matrix','View confusion matrix plot?')
         if MsgBox == 'yes':
@@ -87,6 +88,11 @@ def evaluate(textFile, valueFile=None):
             #raw_input("\nNormalise plot? [y/n]:").lower() in ['yes', 'y']
             if normaliseData == 'yes':
                normaliseData == 'y' 
+=======
+        viewPlot = raw_input("\nView confusion matrix plot? [y/n]:").lower() in ['yes', 'y']
+        if viewPlot:
+            normaliseData = raw_input("\nNormalise plot? [y/n]:").lower() in ['yes', 'y']
+>>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
             cm.plot(normalized=normaliseData)
             plt.show(block=False)
             print cm

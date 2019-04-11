@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# this is final gui window developed by suresh
+>>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
 try:
     import Tkinter as tk
 except ImportError:
@@ -89,7 +93,11 @@ class Evaluator():
         if text == ' ':
             text = 'Empty'
             
+<<<<<<< HEAD
         label = canvas1.create_text(100,10,text='Predicted Emotion:  '+text)
+=======
+        label = canvas1.create_text(100,10,text='Predicted Emotion:  '+text)             
+>>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
 
         if choice in ('Empty'):
             self.getImage('Empty.gif')
