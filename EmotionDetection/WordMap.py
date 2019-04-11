@@ -29,11 +29,7 @@ def buildWordMap(reset, textFile, valueFile):
     wf = WordFilter()
 
     for line in tqdm_gui(zip(textFile, valueFile), leave=False):
-<<<<<<< HEAD
         sleep(0.01)
-=======
-        sleep(0.02)
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
         trainSize += 1
         emotionValues = line[1].strip().split(',')[1:]
         priors = [float(x) + float(y) for x, y in zip(priors, emotionValues)]

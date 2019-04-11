@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 # this is final gui window developed by suresh
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
 try:
     import Tkinter as tk
 except ImportError:
@@ -84,7 +81,7 @@ class Evaluator():
         predProb = map(sum, zip(priors, predValues))
         predEmotion = guessEmotion(predProb)
 
-#Redraw the canvas for each prediction 
+#Redraw the canvas for each prediction
         if remove=='X':  
             canvas.delete('all')
             canvas1.delete('all')
@@ -93,11 +90,7 @@ class Evaluator():
         if text == ' ':
             text = 'Empty'
             
-<<<<<<< HEAD
-        label = canvas1.create_text(100,10,text='Predicted Emotion:  '+text)
-=======
         label = canvas1.create_text(100,10,text='Predicted Emotion:  '+text)             
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
 
         if choice in ('Empty'):
             self.getImage('Empty.gif')
@@ -112,7 +105,7 @@ class Evaluator():
         elif choice == 'Surprise':
             self.getImage('Surprise.gif')
         elif choice == 'Love':
-            self.getImage('Love.gif')
+            self.getImage('love.gif')
         elif choice == 'Fun':
             self.getImage('Fun.gif')
         elif choice == 'hate':
@@ -132,7 +125,9 @@ class Evaluator():
         print "Prob:", ','.join([('%.2f ') % x for x in predProb])
         
     def clearButton(self):
-        global text
+        global text, canvas, canvas1
+        canvas.delete('all')
+        canvas1.delete('all')
         text = ' '
         self.inputStr.delete(0, 'end')
 

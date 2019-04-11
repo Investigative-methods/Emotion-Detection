@@ -6,14 +6,8 @@ import tkMessageBox
 from EmotionDetection import WordMap
 from EmotionDetection import EvaluateText
 from EmotionDetection import GUI
-import pdb
-<<<<<<< HEAD
 import codecs
 
-=======
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
-
-#from Tkinter import messagebox
 answer = ' ' 
 class Testing():
     def __init__(self):
@@ -78,13 +72,8 @@ class Testing():
             if answer=='yes' and text != '':
                 window.destroy()
                 try:
-<<<<<<< HEAD
                     with codecs.open(text, 'r', encoding='utf-8', errors='ignore') as textFile:
-                        with open(values, 'r') as valueFile:                 
-=======
-                    with open(text, 'r') as textFile:
                         with open(values, 'r') as valueFile:               
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
                             EvaluateText.evaluate(textFile, valueFile)
                             
                             

@@ -20,17 +20,16 @@ main = tk.Tk()
 main.deiconify() 
 v = tk.IntVar()
 
-<<<<<<< HEAD
+openwindowflag = ' '
 top = tk.Frame(main, bg="royalblue",width=600, height=100)
 
 center = tk.Frame(main, bg="yellow",width=400, height=400)
 bottom = tk.Frame(main, bg="royalblue",width=600, height=100)
-=======
-top = tk.Frame(main, bg="white",width=600, height=100)
 
-center = tk.Frame(main, bg="SlateGray2",width=400, height=400)
-bottom = tk.Frame(main, bg="white",width=600, height=100)
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
+top = tk.Frame(main, bg="royalblue",width=600, height=100)
+
+center = tk.Frame(main, bg="yellow",width=400, height=400)
+bottom = tk.Frame(main, bg="royalblue",width=600, height=100)
 
 top.grid(row=1,column=1)
 center.grid(row=2,column=1)
@@ -54,17 +53,12 @@ options = [
     ("Exit")
 ]
 
-<<<<<<< HEAD
+
 tk.Label(center, text=" ", fg="black", bg="yellow", anchor="ne", justify="left").pack()
 tk.Label(center, text="Emotion Detection", fg="black", bg="yellow", font=("Arial Bold", 20), padx=20, justify="left").pack()
 tk.Label(center, text=" ", fg="white", bg="yellow", justify="left").pack()
 tk.Label(center, text=" ", fg="white", bg="yellow", justify="left").pack()
-=======
-tk.Label(center, text=" ", fg="black", bg="SlateGray2", anchor="ne", justify="left").pack()
-tk.Label(center, text="Emotion Detection", fg="black", bg="SlateGray2", font=("Arial Bold", 20), padx=20, justify="left").pack()
-tk.Label(center, text=" ", fg="white", bg="SlateGray2", justify="left").pack()
-tk.Label(center, text=" ", fg="white", bg="SlateGray2", justify="left").pack()
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
+
 
 def ShowChoice():
     global choice
@@ -73,8 +67,7 @@ def ShowChoice():
 def submit():
         global choice, flag
         if choice == 0 and flag == " ":
-            flag = "X"    
-            train()
+            train( )
         elif choice == 1:
             test()
         elif choice == 2:
@@ -92,33 +85,21 @@ for val, option in enumerate(options):
     tk.Radiobutton(center, 
                   text=option, 
                   padx=20,
-<<<<<<< HEAD
                   bg="yellow", 
-=======
-                  bg="SlateGray2", 
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
                   variable=v, 
                   command=ShowChoice,
                   value=val).pack(anchor=tk.W)
 
-<<<<<<< HEAD
 tk.Label(center, text=" ", fg="white", bg="yellow", anchor="ne", justify="left").pack()
-tk.Label(center, text=" ", fg="white", bg="yellow", anchor="ne", justify="left").pack()
-=======
-tk.Label(center, text=" ", fg="white", bg="SlateGray2", anchor="ne", justify="left").pack()
-tk.Label(center, text=" ", fg="white", bg="SlateGray2", anchor="ne", justify="left").pack()
->>>>>>> 6ce3df153fd085650c915e65fcb21d035e004697
 button = Button(center, text="Submit" , bg="Gray", width=10, padx=10, command=submit)
 button.pack()
 
 def train():
-    window = Training.Training()    
+    window = Training.Training()
 def test():
     window = Testing.Testing()
-    print "Results"
 def evaluate():
-    window = Evaluate.Evaluate()
-    print "Results"
+    window = Evaluate.Evaluate()  
 def gui():
     window = GUI.Evaluator()
 def printInfo():
